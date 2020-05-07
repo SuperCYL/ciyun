@@ -46,13 +46,13 @@ module.exports = Event.extend(function Base(container, config) {
           <div class="wrapper" style="height:100%;overflow:hidden;">
           <div class="tagcloud" style="width:100%;height:100%;">
             <!-- bo大小 co颜色 -->
-            <a class="b01" href="#" style="font-size:40px;color:#FFA633">习近平</a>
-            <a class="b02" href="#" style="font-size:36px;color:#F74C64">韩正</a>
-            <a class="b03" href="#" style="font-size:29px;color:#4FC8FF">刘鹤</a>
-            <a class="b04" href="#" style="font-size:29px;color:#F9C824">孙春兰</a>
-            <a class="b03" href="#" style="font-size:26px;color:#fff;">李强</a>
-            <a class="b02" href="#" style="font-size:22px;color:#4FC8FF">王晨</a>
-            <a class="b03" href="#" style="font-size:24px;color:#21F0F3">李鸿忠</a>
+            <a class="tagcloudItem b01" href="#" style="font-size:40px;color:#FFA633">习近平</a>
+            <a class="tagcloudItem b02" href="#" style="font-size:36px;color:#F74C64">韩正</a>
+            <a class="tagcloudItem b03" href="#" style="font-size:29px;color:#4FC8FF">刘鹤</a>
+            <a class="tagcloudItem b04" href="#" style="font-size:29px;color:#F9C824">孙春兰</a>
+            <a class="tagcloudItem b03" href="#" style="font-size:26px;color:#fff;">李强</a>
+            <a class="tagcloudItem b02" href="#" style="font-size:22px;color:#4FC8FF">王晨</a>
+            <a class="tagcloudItem b03" href="#" style="font-size:24px;color:#21F0F3">李鸿忠</a>
             
           </div>
       </div>
@@ -71,6 +71,11 @@ module.exports = Event.extend(function Base(container, config) {
         keep: false          //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
     });
     //如果有需要的话,更新样式
+
+    $(".tagcloudItem").click(function(){
+      console.log($(this));
+    })
+
     this.updateStyle();
   },
   /**
